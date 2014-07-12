@@ -11,17 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140712230500) do
+ActiveRecord::Schema.define(version: 20140712232254) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "snacks", force: true do |t|
     t.string   "name"
-    t.float    "price"
-    t.string   "type"
+    t.float    "cost"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "frozen",     default: false
   end
 
 end
